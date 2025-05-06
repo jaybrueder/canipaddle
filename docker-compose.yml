@@ -1,0 +1,11 @@
+services:
+  app:
+    image: jaybrueder/canipaddle:latest
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
